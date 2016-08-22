@@ -6,10 +6,11 @@
 int ACE_TMAIN(int argc, ACE_TCHAR ** argv)
 {
 	ACE_INET_Addr port_to_connect(ACE_TEXT("HAStatus"), ACE_LOCALHOST);
-	ServerAcceptor acceptor;
-	acceptor.open(port_to_connect);
+	ClientConnector connector;
+	ClientHandler* clientHandler = new ClientHandler;
+	connector.connect(clientHandler, port_to_connect);
 
-	acceptor.reactor()->run_event_loop();
+	connector.reactor()->run_event_loop();
 	ACE_OS::puts(ACE_TEXT("This example requires threads."));
 	return 0;
 }

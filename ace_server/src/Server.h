@@ -5,13 +5,13 @@
 #include "ace/SOCK_Acceptor.h"
 
 
-class serverHandler;
+class ServerHandler;
 
-typedef ACE_Acceptor<serverHandler, ACE_SOCK_ACCEPTOR> ServerAcceptor;
+typedef ACE_Acceptor<ServerHandler, ACE_SOCK_ACCEPTOR> ServerAcceptor;
 
 typedef ACE_Svc_Handler<ACE_SOCK_STREAM, ACE_NULL_SYNCH> super;
 
-class serverHandler : public super
+class ServerHandler : public super
 {
 public:
 	int open(void *);

@@ -2,7 +2,7 @@
 
 #include "server.h"
 
-int serverHandler::open(void *p)
+int ServerHandler::open(void *p)
 {
 	if (super::open(p) == -1)
 	{
@@ -11,12 +11,12 @@ int serverHandler::open(void *p)
 	return 0;
 }
 
-int serverHandler::handle_input(ACE_HANDLE fd /*= ACE_INVALID_HANDLE*/)
+int ServerHandler::handle_input(ACE_HANDLE fd /*= ACE_INVALID_HANDLE*/)
 {
 	return 0;
 }
 
-int serverHandler::handle_output(ACE_HANDLE fd /*= ACE_INVALID_HANDLE*/)
+int ServerHandler::handle_output(ACE_HANDLE fd /*= ACE_INVALID_HANDLE*/)
 {
 	return 0;
 }
